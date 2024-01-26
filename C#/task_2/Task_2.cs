@@ -4,7 +4,7 @@ class Task_2
 {
     static void Main(string[] args)
     {
-        int[] array = new int[] { 1, 0, 2, 3, 0, 5, 0 };
+        int[] array = new int[] { 1, 0, 0, 2, 3, 2, 5, 0 };
         printArray(array);
         System.Console.WriteLine();
         dublerZero(array);
@@ -22,7 +22,7 @@ class Task_2
     {
         for (int i = 0; i < arr.Length; i++)
         {
-            if (arr[i] == 0)
+            if (arr[i] == 0 && i != arr.Length - 1)
             {
                 for (int j = arr.Length - 2; j > i; j--)
                 {
@@ -30,7 +30,7 @@ class Task_2
 
                 }
                 arr[i + 1] = 0;
-                i += 2;
+                i += 1;
             }
         }
     }
